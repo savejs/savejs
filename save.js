@@ -1,6 +1,6 @@
 /**
  * Author: lltr
- * Version: 1.0
+ * Version: 1.0.0
  * https://savejs.com
  */
 var savejs = 
