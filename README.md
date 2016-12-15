@@ -1,5 +1,5 @@
 # save.js
-save.js allows easy saving of anything in an input field to a text file.
+save.js allows ease of saving anything in an input field to a text file.
 
 ### Getting Started
 
