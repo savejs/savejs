@@ -3,7 +3,7 @@ save.js allows ease of saving anything in an input field to a text file.
 
 ### Getting Started
 
-save.js is very easy to start with, simply create a new instance of save.js with your `<button>` or `<a>` id and the `<input>` id. 
+save.js is very easy to start with, simply create a new instance of save.js with your `<button>` or `<a>` id and the input id to the data-save-target attribute of your `<button>` or `<a>`. The input can be an `<input>` or `<div>` or anything.
 You can set the mime type to anything you would like, which by default is `application/octet-stream`.
 
 Afte configuring the instance, you can instantiate it by using `.init()`.
