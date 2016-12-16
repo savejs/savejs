@@ -13,7 +13,6 @@ Here is an example:
 ```js
 var test = savejs.create({
     buttonId: 'saveBtn',
-    inputId: 'saveTextarea',
     mimeType: 'text/plain',
     // requestFileName: true,
     // requestFileNameMessage: 'Enter a file name',
