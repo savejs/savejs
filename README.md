@@ -22,6 +22,12 @@ var test = savejs.create({
 test.init();
 ```
 
+```html
+<h2>Textbox (text)</h2>
+<input type="text" id="saveTextarea"/>
+<a href="javascript:void(0)" id="saveTextareaBtn" data-save-target="saveTextarea">SAVE</a>
+```
+
 ### Credits
 #### [lltr](https://github.com/lltr)
 
