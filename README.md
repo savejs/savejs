@@ -14,7 +14,7 @@ Here is an example:
 var test = savejs.create({
     buttonId: 'saveBtn',
     mimeType: 'text/plain',
-    // requestFileName: true,
+    // requestFileName: true, //default filename is guid
     // requestFileNameMessage: 'Enter a file name',
 });
 
