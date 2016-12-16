@@ -1,14 +1,12 @@
 /**
  * Author: lltr
- * Version: 1.0.0
+ * Version: 1.0.1
  * https://savejs.com
  */
 var savejs = 
 {
     buttonId: '',
-    inputId: '',
     requestFileName: false,
-    fileName: null,
     requestFileNameMessage: 'Enter file name',
     mimeType: 'application/octet-stream',
 
@@ -54,20 +52,21 @@ var savejs =
 
     _save: function () 
     {
-        var output = document.getElementById(this.inputId).value;
+        var fileName;
+        var inputId = document.getElementById(this.buttonId).getAttribute('data-save-target');
+        var output = document.getElementById(inputId).value;
         var saveBlob = window.Blob || window.webkitBlob || window.mozBlob || window.msBlob;
         var outputFileAsBlob = new saveBlob([output], { type: this.mimeType });
         var URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
 
-        this.requestFileName ? this.fileName = window.prompt(this.requestFileNameMessage, "") : this.fileName = this._generateUUID();
+        this.requestFileName ? fileName = window.prompt(this.requestFileNameMessage, "") : fileName = this._generateUUID();
         var downloadLink = document.createElement("a");
-        downloadLink.download = this.fileName;
+        downloadLink.download = fileName;
         downloadLink.innerHTML = "Download File";
 
         if (window.webkitURL != null) 
         {
             downloadLink.href = URL.createObjectURL(outputFileAsBlob);
-            console.log("chrome");
         }
         else if (URL != null)
         {
