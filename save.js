@@ -54,7 +54,7 @@ var savejs =
     {
         var fileName;
         var inputId = document.getElementById(this.buttonId).getAttribute('data-save-target');
-        var output = document.getElementById(inputId).value;
+        var output = document.getElementById(inputId).value || document.getElementById(inputId).innerHTML;
         var saveBlob = window.Blob || window.webkitBlob || window.mozBlob || window.msBlob;
         var outputFileAsBlob = new saveBlob([output], { type: this.mimeType });
         var URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
